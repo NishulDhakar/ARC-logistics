@@ -45,9 +45,10 @@ export function FuturePlans() {
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+                            className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
                         >
                             <div className="w-16 h-16 bg-brand-navy rounded-3xl flex items-center justify-center mb-8">
                                 <plan.icon className="w-8 h-8 text-brand-orange" />

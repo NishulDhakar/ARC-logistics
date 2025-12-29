@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Footer() {
     return (
@@ -36,10 +37,11 @@ export function Footer() {
 
                         <div className="flex items-end gap-8">
                             <div className="relative w-64 h-32 rounded-lg overflow-hidden border border-white/10 hidden md:block">
-                                <img
+                                <Image
                                     src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                     alt="Fleet"
-                                    className="object-cover w-full h-full opacity-60 hover:opacity-100 transition-opacity"
+                                    fill
+                                    className="object-cover opacity-60 hover:opacity-100 transition-opacity"
                                 />
                             </div>
 
@@ -49,12 +51,12 @@ export function Footer() {
                                 </h1>
                             </div>
                             <div className="flex flex-col gap-2">      <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Office Address -</div>
-                            <p className="text-gray-300 text-sm max-w-xs ml-auto">
-                                T-14, 3rd Floor, Super Arcade Complex, <br />
-                                Near Ashirwad Hotel, Valia Chokdi, <br />
-                                GIDC, Ankleshwar, Dist. Bharuch
-                            </p>  </div>
-                       
+                                <p className="text-gray-300 text-sm max-w-xs ml-auto">
+                                    T-14, 3rd Floor, Super Arcade Complex, <br />
+                                    Near Ashirwad Hotel, Valia Chokdi, <br />
+                                    GIDC, Ankleshwar, Dist. Bharuch
+                                </p>  </div>
+
                         </div>
                     </div>
 
@@ -78,7 +80,7 @@ export function Footer() {
                                         <Phone className="w-3 h-3 text-brand-orange" /> Kunal Verma: +91 9924837626
                                     </div>
                                 </div>
-               
+
                             </div>
                         </div>
                     </div>

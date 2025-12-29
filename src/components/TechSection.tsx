@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Cpu, ArrowRight, Play } from "lucide-react";
+import Image from "next/image";
 
 
 
@@ -10,9 +11,11 @@ export function TechSection() {
         <section id="tech" className="relative py-24 bg-brand-navy overflow-hidden">
             {/* Background Image / Texture */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
-                <div
-                    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80')] 
-                    bg-cover bg-center mix-blend-overlay"
+                <Image
+                    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2670&q=80"
+                    alt="Background Tech"
+                    fill
+                    className="object-cover mix-blend-overlay"
                 />
             </div>
 
@@ -32,12 +35,13 @@ export function TechSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
-                            className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                            className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/3]"
                         >
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
                                 alt="Modern Logistics Tech"
-                                className="w-full h-[400px] object-cover"
+                                fill
+                                className="object-cover"
                             />
 
                             {/* Floating 'Collaborated With' Card */}

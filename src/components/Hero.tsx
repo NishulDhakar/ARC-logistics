@@ -2,15 +2,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { HyperText } from "./ui/hyper-text";
+import Image from "next/image";
 
 export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <div
-                    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] 
-                    bg-cover bg-center"
+                <Image
+                    src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                    alt="Arc Logistics Hero"
+                    fill
+                    priority
+                    className="object-cover"
                 />
                 {/* Overlay for text readability - darker on left, lighter on right */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />

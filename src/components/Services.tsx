@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Services() {
     return (
@@ -51,10 +52,11 @@ export function Services() {
                             className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
                         >
                             <div className="absolute inset-0 bg-sky-400/20 group-hover:bg-sky-400/0 transition-colors z-10" />
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Air Freight"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
 
@@ -83,10 +85,11 @@ export function Services() {
                             transition={{ delay: 0.4 }}
                             className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer bg-blue-600"
                         >
-                            <img
+                            <Image
                                 src="https://plus.unsplash.com/premium_photo-1661963780999-6712fcb46eec?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q29udGluZW50YWwlMjBPY2VhbiUyMEZyZWlnaHR8ZW58MHx8MHx8fDA%3D"
                                 alt="Ocean Freight"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 mix-blend-overlay group-hover:opacity-80"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 mix-blend-overlay group-hover:opacity-80"
                             />
 
                             <div className="absolute top-8 right-8 z-20 text-right">

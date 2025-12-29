@@ -6,6 +6,7 @@ import { Services } from "@/components/Services";
 import { TechSection } from "@/components/TechSection";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Truck, Box, Droplet, Container, Anchor, FileText, Settings } from "lucide-react";
+import Image from "next/image";
 
 const serviceCategories = [
     {
@@ -134,10 +135,11 @@ export default function ServicesPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative rounded-[3rem] overflow-hidden aspect-square lg:aspect-auto h-[600px] border border-white/10"
                         >
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
                                 alt="Logistics Technology"
-                                className="absolute inset-0 w-full h-full object-cover opacity-60"
+                                fill
+                                className="object-cover opacity-60"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
                             <div className="absolute bottom-12 left-12 right-12 text-center p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/10">

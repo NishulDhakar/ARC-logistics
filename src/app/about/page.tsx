@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Users, Target, Shield, Award, Globe, History } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
     return (
@@ -50,10 +51,11 @@ export default function AboutPage() {
                             viewport={{ once: true }}
                             className="relative rounded-3xl overflow-hidden h-[600px]"
                         >
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Logistics Center"
-                                className="absolute inset-0 w-full h-full object-cover"
+                                fill
+                                className="object-cover"
                             />
                             <div className="absolute inset-0 bg-brand-navy/30" />
                         </motion.div>
@@ -175,9 +177,8 @@ export default function AboutPage() {
                         ].map((company, idx) => (
                             <motion.div
                                 key={idx}
-                                shadow-sm
                                 whileHover={{ y: -5 }}
-                                className="p-8 bg-gray-50 rounded-2xl text-center border-2 border-transparent hover:border-brand-orange/20 transition-all"
+                                className="p-8 bg-gray-50 rounded-2xl text-center border-2 border-transparent hover:border-brand-orange/20 transition-all shadow-sm"
                             >
                                 <h4 className="text-xl font-black text-brand-navy uppercase mb-1">{company.name}</h4>
                                 <p className="text-brand-orange font-bold text-xs uppercase tracking-widest">{company.location}</p>

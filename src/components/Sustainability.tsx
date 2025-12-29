@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Recycle, Wind, ShieldAlert } from "lucide-react";
+import Image from "next/image";
 
 export function Sustainability() {
     return (
@@ -16,10 +17,11 @@ export function Sustainability() {
                         viewport={{ once: true }}
                         className="relative h-[600px] rounded-[3rem] overflow-hidden group"
                     >
-                        <img
+                        <Image
                             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
                             alt="Green Logistics"
-                            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                            fill
+                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
                         />
                         <div className="absolute inset-0 bg-brand-navy/40" />
                         <div className="absolute bottom-12 left-12 right-12 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
